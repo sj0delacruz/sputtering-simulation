@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>  
+		<title>Simulación del sistema de Sputtering</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<style>
+			canvas {
+			border:1px solid black;
+			background-color: white;
+			}
+		</style>
+	<meta charset="UTF-8">
+	</head>
+<body onload="start()">
+<div style = "text-align:center;">
+	<canvas id="canvas"> </canvas>
+	
+</div>
+<table style="margin: 0 auto;" border="1" >
+	<tr>
+		<th>  </th>
+		<th><label for="VOLTCATH" style="color:orange">Cathode</label> </th>
+		<th><label for="VOLTDESCA" style="color:black">Discharge</label></th>
+		<th><label for="VOLTHAZ" style="color:red">Beam</label></th>
+		<th><label for="VOLTACER" style="color:blue">Accelerator</label></th>
+		<th><label for="VOLTNEU" style="color:brown">Neutralizer</label></th>
+	</tr>
+	<tr>
+		<td>VOLTAGE</td>
+		<td><input type="number" id="VOLTCATH" name="VOLTCATH" min="0" max="20" value="11" step="1"> V </td>
+		<td><input type="number" id="VOLTDESCA" name="VOLTDESCA" min="0" max="50" value="35" step="1"> V </td>
+		<td><input type="number" id="VOLTHAZ" name="VOLTHAZ" min="0" max="1000" value="1000" step="50"> V </td>
+		<td><input type="number" id="VOLTACER" name="VOLTACER" min="0" max="500" value="300" step="20"> V </td>
+		<td><input type="number" id="VOLTNEU" name="VOLTNEU" min="0" max="20" value="11" step="1"> V </td>
+	</tr>
+	<tr>
+		<td>CURRENT</td>
+		<td id="I_C">0 mA</td>
+		<td id="I_D">0 A</td>
+		<td id="I_B">0 mA</td>
+		<td id="I_A">0 mA</td>
+		<td id="I_N">0 mA</td>
+	</tr>
+    </table>
+    <script src="./script.js"></script>
+    </body>
+</html>
